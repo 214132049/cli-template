@@ -1,12 +1,15 @@
 {
   "name": "{{ name }}",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "{{ version }}",
+  "description": "{{ description }}",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node run dev"
   },
-  "author": "",
+  {{#if needHomePage }}
+  "homepage": "{{ homepage }}",
+  {{/if}}
+  "author": "{{ author }}",
   "license": "ISC",
   "dependencies": {
     "vue": "^2.4.4"
